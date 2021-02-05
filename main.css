@@ -21,6 +21,11 @@ body {
     font-size: large; 
 }
 
+#image {
+    padding-left: 24%;
+    padding-right: 24%;
+}
+
 #button {
     margin-left: 35%;
     margin-right: 35%;
@@ -30,3 +35,4 @@ body {
     padding: 2%;
     background-color: yellow;
 }
+
