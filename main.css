@@ -9,10 +9,10 @@ body {
 .playArea {
     margin-left: 25%;
     margin-right: 25%;
-    margin-top: 15%;
-    margin-bottom: 15%;
+    margin-top: 30%;
+    margin-bottom: 30%;
     padding: 2%;
-    border: 1vh;
+    border: 0.5vh;
     border-color: white;
     border-style: solid;
     text-align: center;
@@ -21,7 +21,7 @@ body {
     font-size: large; 
 }
 
-.button {
+#button {
     margin-left: 35%;
     margin-right: 35%;
     margin-top: 2%;
