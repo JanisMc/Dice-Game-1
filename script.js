@@ -3,10 +3,19 @@ const image = document.getElementById("dice");
 const score = document.getElementById("score")
 const win = document.getElementById("win");
 const lose = document.getElementById("lose");
+const restart = document.getElementById("reset");
 
 let runningScore = 0;
 
-image.style.display = "none";
+const reset = () => {
+    score.textContent = 0;
+    button.style.display = "inline-block";
+    image.style.visibility = "hidden";
+    win.style.display = "none";
+    lose.style.display = "none";
+}
+
+image.style.visibility = "hidden";
 win.style.display = "none";
 lose.style.display = "none";
 
@@ -14,11 +23,13 @@ button.addEventListener("click", () => {
     let press = Math.ceil(Math.random() * 6);
     console.log(press);
 
-    image.style.display = "flex";
+    image.style.visibility = "visible";
 
     if (press === 1) {
         image.src = "./img/dice1.png";
         lose.style.display = "block"; 
+        button.style.display = "none";
+        runningScore = 0; 
     } else if (press === 2) {
         image.src =  "./img/dice2.png";
     } else if (press === 3) {
@@ -37,7 +48,10 @@ button.addEventListener("click", () => {
 
     if (runningScore > 20) {
         win.style.display = "block";
+        runningScore = 0;
     } 
-
 })
 
+restart.addEventListener("click", () => {
+    reset()
+})
